@@ -13,7 +13,7 @@ import {
   Phone,
   UserRound,
 } from 'lucide-react';
-import { supabase } from '@lib/supabase';
+import { supabase } from '@/lib/supabase/client';
 
 const db = supabase as any;
 
