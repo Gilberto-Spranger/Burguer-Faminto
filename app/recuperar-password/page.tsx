@@ -13,7 +13,7 @@ import {
   Loader2,
   ShieldCheck,
 } from 'lucide-react';
-import { supabase } from '@/lib/supabase';
+import { supabase } from '@/lib/supabase/client';
 
 export default function RecuperarPasswordPage() {
   const [email, setEmail] = useState('');
