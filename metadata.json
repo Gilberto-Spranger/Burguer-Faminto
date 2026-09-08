@@ -1,0 +1,6 @@
+{
+  "name": "Burguer Faminto",
+  "description": "A tua fome acabou de encontrar o lugar certo.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

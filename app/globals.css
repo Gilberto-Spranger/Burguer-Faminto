@@ -1,0 +1,68 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-faminto-red: #E63946;
+  --color-faminto-orange: #FF6B35;
+  --color-faminto-gold: #F4A261;
+  --color-faminto-black: #0A0A0A;
+  --color-faminto-dark: #141414;
+  --color-faminto-darker: #1A1A1A;
+  --color-faminto-light: #F8F9FA;
+  
+  --font-display: 'Oswald', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+:root {
+  --bg-primary: var(--color-faminto-light);
+  --bg-secondary: #FFFFFF;
+  --text-primary: var(--color-faminto-black);
+  --text-secondary: #4A4A4A;
+  --accent-primary: var(--color-faminto-red);
+  --border-color: #E0E0E0;
+}
+
+.dark {
+  --bg-primary: var(--color-faminto-black);
+  --bg-secondary: var(--color-faminto-dark);
+  --text-primary: #FFFFFF;
+  --text-secondary: #A0A0A0;
+  --accent-primary: var(--color-faminto-red);
+  --border-color: #2A2A2A;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, var(--color-faminto-red), var(--color-faminto-orange));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
