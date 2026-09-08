@@ -7,7 +7,7 @@ import {
   Order,
   NotificationItem,
 } from '@/types';
-import { supabase } from './supabase';
+import { supabase } from './supabase/client';
 import {
   markNotificationRead as markNotifRead,
   markAllNotificationsRead as markAllNotifRead,
