@@ -14,7 +14,7 @@ import {
   deleteNotification as deleteNotif,
   subscribeToNotifications,
   createNotification,
-} from './supabase-notifications';
+} from './supabase/supabase-notifications';
 
 interface AppState {
   products: Product[];
