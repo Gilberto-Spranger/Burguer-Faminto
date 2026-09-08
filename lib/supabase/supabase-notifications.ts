@@ -1,4 +1,4 @@
-import { supabase } from './supabase';
+import { supabase } from './client';
 import { NotificationItem } from '@/types';
 
 const db = supabase as any;
