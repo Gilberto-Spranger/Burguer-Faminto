@@ -819,6 +819,8 @@ export const useStore = create<AppState>((set, get) => ({
       set({ isAuthLoading: true });
 
       const { data: { session }, error } = await supabase.auth.getSession();
+      console.log('Sessão ativa:', session);
+      console.log('Erro de sessão:', error);
 
       if (error) {
         console.error('Erro ao obter sessão:', error);
