@@ -819,19 +819,13 @@ export const useStore = create<AppState>((set, get) => ({
       set({ isAuthLoading: true });
 
       const { data: { session }, error } = await supabase.auth.getSession();
-      console.log('Sessão ativa:', session);
-      console.log('Erro de sessão:', error);
-
+      
       if (error) {
-        console.error('Erro ao obter sessão:', error);
-        set({
-          user: null,
-          favorites: [],
-          notifications: [],
-          orders: [],
-          isAuthLoading: false,
-        });
-        return;
+      alert('ERRO SUPABASE: ' + error.message);
+      } else if (!session) {
+      alert('SESSÃO: Nenhuma sessão encontrada (session é null)');
+      } else {
+      alert('SESSÃO ENCONTRADA! ID: ' + session.user.id);
       }
 
       if (session?.user) {
